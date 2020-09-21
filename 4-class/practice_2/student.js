@@ -4,10 +4,10 @@ import person from './person';
 export default class Student extends person {
   constructor(name, age, classNum) {
     super(name, age);
-    this.class = classNum;
+    this.klass = classNum;
   }
 
   introduce() {
-    return `I am a Student. I am at Class ${this.class}.`;
+    return `I am a Student. I am at Class ${this.klass}.`;
   }
 }
