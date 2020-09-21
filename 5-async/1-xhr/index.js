@@ -7,7 +7,7 @@ function fetchData(url, successCallback, errorCallback) {
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState !== 4) {
-      errorCallback(xhr.statusText);
+      return;
     }
     if (xhr.status >= 200 && xhr.status < 300) {
       successCallback(xhr.statusText);
@@ -18,7 +18,7 @@ function fetchData(url, successCallback, errorCallback) {
   // end -->
 }
 
-const URL = 'http://localhost:3000/api';
+// const URL = 'http://localhost:3000/api';
 fetchData(
   URL,
   result => {
